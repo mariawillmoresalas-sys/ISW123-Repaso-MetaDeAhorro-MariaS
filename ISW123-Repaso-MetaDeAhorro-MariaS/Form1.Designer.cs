@@ -30,12 +30,12 @@
         {
             lblMeta = new Label();
             lblAhorroAlMes = new Label();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
-            button1 = new Button();
-            listBox1 = new ListBox();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            nudAhorro = new NumericUpDown();
+            btnCalcular = new Button();
+            lstSalida = new ListBox();
+            nudMeta = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)nudAhorro).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudMeta).BeginInit();
             SuspendLayout();
             // 
             // lblMeta
@@ -58,52 +58,53 @@
             lblAhorroAlMes.TabIndex = 1;
             lblAhorroAlMes.Text = "Ahorro al mes";
             // 
-            // numericUpDown1
+            // nudAhorro
             // 
-            numericUpDown1.Location = new Point(190, 133);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 2;
+            nudAhorro.Location = new Point(190, 62);
+            nudAhorro.Name = "nudAhorro";
+            nudAhorro.Size = new Size(120, 23);
+            nudAhorro.TabIndex = 3;
             // 
-            // numericUpDown2
+            // btnCalcular
             // 
-            numericUpDown2.Location = new Point(190, 62);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 3;
+            btnCalcular.Location = new Point(383, 92);
+            btnCalcular.Name = "btnCalcular";
+            btnCalcular.Size = new Size(112, 37);
+            btnCalcular.TabIndex = 4;
+            btnCalcular.Text = "Calcular";
+            btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += btnCalcular_Click;
             // 
-            // button1
+            // lstSalida
             // 
-            button1.Location = new Point(383, 92);
-            button1.Name = "button1";
-            button1.Size = new Size(112, 37);
-            button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            lstSalida.FormattingEnabled = true;
+            lstSalida.Location = new Point(49, 222);
+            lstSalida.Name = "lstSalida";
+            lstSalida.Size = new Size(487, 169);
+            lstSalida.TabIndex = 5;
             // 
-            // listBox1
+            // nudMeta
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(49, 222);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(487, 169);
-            listBox1.TabIndex = 5;
+            nudMeta.Location = new Point(190, 124);
+            nudMeta.Name = "nudMeta";
+            nudMeta.Size = new Size(120, 23);
+            nudMeta.TabIndex = 6;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(605, 450);
-            Controls.Add(listBox1);
-            Controls.Add(button1);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
+            Controls.Add(nudMeta);
+            Controls.Add(lstSalida);
+            Controls.Add(btnCalcular);
+            Controls.Add(nudAhorro);
             Controls.Add(lblAhorroAlMes);
             Controls.Add(lblMeta);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudAhorro).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudMeta).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -112,9 +113,10 @@
 
         private Label lblMeta;
         private Label lblAhorroAlMes;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private Button button1;
-        private ListBox listBox1;
+       
+        private NumericUpDown nudAhorro;
+        private Button btnCalcular;
+        private ListBox lstSalida;
+        private NumericUpDown nudMeta;
     }
 }
